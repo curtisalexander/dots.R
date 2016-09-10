@@ -2,7 +2,7 @@ library("dplyr")
 library("purrr")
 
 ## test function =====
-# notice that I  pass in dots to the function
+# notice that I pass in dots to the function
 
 # could actually check that the arguments passed in conform
 #   to some acceptable list
@@ -38,7 +38,7 @@ match_cols <- function(tbl, patt, arg_treatment = "ignore", ...) {
 
   grepl_options <- c("ignore.case", "perl", "fixed", "value", "useBytes")
 
-  #
+  # either ignore an incorrect argument or throw an error
   if (arg_treatment == "ignore") {
     # filter out options that are not possible, side-stepping potential errors
     if (!length(dots) == 0) {
